@@ -1,0 +1,113 @@
+.testemonials__section {
+    background-color: var(--white);
+}
+
+.testemonials__title {
+    font-family: Fraunces, sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--grayish-blue);
+    /* A4A4A4 */
+    text-align: center;
+    padding: 160px 0 80px 0;
+}
+
+.testemonials__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 25px;
+    margin: 0 auto 160px auto;
+}
+
+.testemonial__container {
+    text-align: center;
+    width: 350px;
+    height: 350px;
+}
+
+.client__image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 65px auto;
+}
+
+.client__review {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--grayish-blue);
+    margin: 0 0 65px 0;
+}
+
+.client__name {
+    color: var(--very-dark-desaturated-blue);
+    font-family: Fraunces, sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.client__job_title {
+    color: var(--grayish-blue);
+    font-size: 12px;
+}
+
+.decoration_images {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.image__milk,
+.image__orange,
+.image__cone,
+.image__sugar {
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .testemonials__container {
+        flex-direction: column;
+        margin: 0 auto 70px auto;
+        gap: 70px;
+    }
+
+    .testemonial__container {
+        height: 300px;
+    }
+
+    .testemonials__title {
+        font-size: 20px;
+        padding: 70px 0 60px 0;
+    }
+
+    .client__image {
+        margin: 0 auto 40px auto;
+    }
+
+    .client__review {
+        margin: 0 40px 40px 40px;
+    }
+
+    .decoration_images {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .image__milk {
+        content: url('../img/mobile/image-gallery-milkbottles.jpg');
+    }
+
+    .image__orange {
+        content: url('../img/mobile/image-gallery-orange.jpg');
+    }
+
+    .image__cone {
+        content: url('../img/mobile/image-gallery-cone.jpg');
+    }
+
+    .image__sugar {
+        content: url('../img/mobile/image-gallery-sugar-cubes.jpg');
+    }
+}

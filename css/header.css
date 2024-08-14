@@ -1,0 +1,219 @@
+.header {
+    width: 100%;
+    height: 800px;
+    background-image: url('../img/desktop/image-header.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    position: relative;
+}
+
+.navigation__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    scale: 1.4;
+    margin: 40px 65px;
+}
+
+.navigation__button {
+    display: none;
+    background-image: url('../img/icon-hamburger.svg');
+    background-repeat: no-repeat;
+    background-size: 40px;
+    width: 50px;
+    height: 50px;
+    margin: 35px 30px;
+}
+
+.navigation__mobile_decoration {
+    display: none;
+    position: absolute;
+    background-color: var(--white);
+    clip-path: polygon(0 100%, 100% 0, 100% 100%);
+    top: 81px;
+    width: 25px;
+    height: 25px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    width: 535px;
+    height: 122px;
+}
+
+.navigation__details {
+    display: flex;
+    gap: 50px;
+    font-size: 18px;
+}
+
+.navigation__about {
+    color: var(--white);
+    font-weight: 700;
+}
+
+.navigation__services {
+    color: var(--white);
+    font-weight: 700;
+}
+
+.navigation__products {
+    color: var(--white);
+    font-weight: 700;
+}
+
+.navigation__contact {
+    width: 140px;
+    height: 62px;
+    padding: 25px, 35px;
+    background-color: var(--white);
+    color: var(--very-dark-desaturated-blue);
+    margin: 30px 50px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-family: Fraunces, sans-serif;
+}
+
+.slogan {
+    font-family: Fraunces, sans-serif;
+    font-size: 82px;
+    text-align: center;
+    margin: 78px auto 100px;
+    color: var(--white);
+}
+
+.arrow_down {
+    margin: auto;
+}
+
+@media (max-width: 1024px) {
+    .navigation__details {
+        gap: 25px
+    }
+
+    .navigation__contact {
+        margin: 30px 25px;
+    }
+
+    .slogan {
+        font-size: 40px;
+        margin: 55px auto 70px;
+    }
+
+    .arrow_down {
+        scale: 0.8;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        width: 400px;
+        height: 100px;
+    }
+
+    .logo {
+        scale: 1;
+        margin: 25px;
+    }
+
+    .navigation__details {
+        gap: 15px;
+        font-size: 12px
+    }
+
+    .navigation__contact {
+        width: 100px;
+        height: 50px;
+        margin: 25px;
+        font-size: 14px;
+    }
+
+    .slogan {
+        font-size: 30px;
+        margin: 30px auto 30px;
+    }
+
+    .arrow_down {
+        scale: 0.6;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        height: 540px;
+    }
+
+    .logo {
+        scale: 1;
+        margin: 25px;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .menu_open.navigation {
+        display: block;
+        position: absolute;
+        width: calc(100% * 0.85);
+        height: 305px;
+        background-color: var(--white);
+        left: 20px;
+        top: 105px;
+        z-index: 1;
+    }
+
+    .navigation__button {
+        display: block;
+        margin-right: calc(100% * 0.05);
+    }
+
+    .menu_open.navigation__mobile_decoration {
+        display: block;
+        left: calc(100% * 0.85 - 5px);
+    }
+
+    .navigation__details {
+        gap: 40px;
+        font-size: 16px;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 40px;
+    }
+
+    .navigation__about {
+        color: var(--dark-grayish-blue);
+    }
+
+    .navigation__services {
+        color: var(--dark-grayish-blue);
+    }
+
+    .navigation__products {
+        color: var(--dark-grayish-blue);
+        /* 7c7c7c*/
+    }
+
+    .navigation__contact {
+        width: 100px;
+        height: 50px;
+        margin-left: calc(50% - 50px);
+        font-size: 14px;
+        background-color: var(--yellow);
+    }
+
+    .slogan {
+        font-size: 50px;
+        margin: 10px auto 50px;
+    }
+
+    .arrow_down {
+        scale: 1;
+    }
+}
